@@ -36,7 +36,8 @@ Connector is very difficult to divide _by function_.
   * Unique fields (parameters) in the footprint name are separated by _ character.
   * Package dimensions are specified as length x width (and optionally height).
   * Pin layout (e.g. 1x10, 2x15).
-  * Orientation (e.g. Horizontal, Vertical). 
+  * Orientation (e.g. Horizontal, Vertical).
+  * Technology (e.g. THT, SMT).
   
   Not all of the fields defined above are strictly required for a particular footprint.
 
