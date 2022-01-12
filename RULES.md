@@ -30,9 +30,9 @@ Connector is very difficult to divide _by function_.
   * Package name and number of pins are separated by a hyphen (e.g. DIP-20).
   * Packages with special pads add an identifier to the pin count field separated by a hyphen.
     * The field includes the count of uniquely numbered pads of this type.
-    * For exposed pads (large copper pad below the part) [count]EP.
-    * For shield pads [count]SH (Unless such a pin is already expected for the part. An example would be a HDMI connector.).
-    * For pads connecting pure mechanical mounting leads [count]MP.
+    * For exposed pads (large copper pad below the part) `[count]EP`.
+    * For shield pads `[count]SH` (Unless such a pin is already expected for the part. An example would be a HDMI connector.).
+    * For pads connecting pure mechanical mounting leads `[count]MP`.
   * Unique fields (parameters) in the footprint name are separated by _ character.
   * Package dimensions are specified as length x width (and optionally height).
   * Pin layout (e.g. 1x10, 2x15).
