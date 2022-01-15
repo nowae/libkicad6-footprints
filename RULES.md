@@ -40,6 +40,7 @@ Connector is very difficult to divide _by function_.
   * Technology (e.g. THT, SMT).
   
   Not all of the fields defined above are strictly required for a particular footprint.
+  For a product series, footprint name is manufacturer code (e.g. Wurth code).
 
 * Footprint naming field prefixes
   * A footprint name has to convey a lot of information to clearly specify the purpose and parameters of the footprint. Some fields in footprint names are common to many footprints and can be shortened using special abbreviations.
