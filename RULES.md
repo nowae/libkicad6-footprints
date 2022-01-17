@@ -94,9 +94,9 @@ Connector is very difficult to divide _by function_.
 * Courtyard layer requirements:
   * The component courtyard is defined as the smallest rectangular area that provides a minimum electrical and mechanical clearance around the combined component body and land pattern boundaries.
   * Courtyard uses `0.05mm` line width.
-  * All courtyard line elements are placed on a `0.01mm` grid.
+  * All courtyard line elements are placed on a `0.05mm` grid.
   * Unless otherwise specified, clearance is `0.25mm`.
   * Components smaller than `0603` should have a clearance of `0.15mm`.
   * Connectors should have a clearance of `0.5mm`.
   * Crystals should have a clearance of `0.5mm`.
-  * BGA devices should have a clearance of `1.0mm` (why?).
+  * BGA devices should have a clearance of `1.0mm` (A middle way of IPC-7351B).
