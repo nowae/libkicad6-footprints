@@ -1,6 +1,6 @@
 # NOWAE - KiCad6 Footprint Design Rules
 
-Ispired by [KiCad Library Conventions](https://klc.kicad.org/symbol/).
+Ispired by [KiCad Library Conventions](https://klc.kicad.org/footprint/).
 This document contains our rules to design footprint symbols and is more or less the same of KiCad Conventions.
 
 ## Footprint libraries files
@@ -75,3 +75,28 @@ Connector is very difficult to divide _by function_.
   * Exception: the numbers for the missing pins are skipped and the normal pin numbers are assigned to the remaining pins. To indicate this, the footprint should be named as PKG-<xx>-<yy> where:
     * xx = number of remaining pins
     * yy = number of remaining pins + number of removed pins
+
+## Layer Requirements
+
+* Silkscreen layer requirements:
+  * Reference Designator must be drawn on `F.SilkS` layer, with text size equal to `0.8mm` and text thickness equal to `0.15mm`
+  * Silkscreen line width is `0.15mm`
+  * Silkscreen must not be placed over pads or areas of exposed copper
+  * For SMD footprints, silkscreen must be fully visible after boards assembly
+  * Pin-1 designator is provided on the `F.SilkS` layer and must be visible after board assembly
+
+* Fabrication layer requirements:
+  * The fabrication layers are used to display the simplified mechanical outline of components on the PCB.
+  * Simplified component outline must be provided on `F.Fab` layer, utline line width must be `0.15mm`, but for very small component can be `0.10mm`.
+  * Component value (footprint name) must be displayed on the `F.Fab` layer, but it is set _not visible_. Text size must be equal to `0.8mm` and text thickness must be equal to `0.15mm`.
+  * A second copy of the reference designator (RefDes) must be provided on the `F.Fab` layer, by using `%R` on the field value. With text size must be equal to `0.8mm` and text thickness must be equal to `0.15mm`.
+
+* Courtyard layer requirements:
+  * The component courtyard is defined as the smallest rectangular area that provides a minimum electrical and mechanical clearance around the combined component body and land pattern boundaries.
+  * Courtyard uses `0.05mm` line width.
+  * All courtyard line elements are placed on a `0.01mm` grid.
+  * Unless otherwise specified, clearance is `0.25mm`.
+  * Components smaller than `0603` should have a clearance of `0.15mm`.
+  * Connectors should have a clearance of `0.5mm`.
+  * Crystals should have a clearance of `0.5mm`.
+  * BGA devices should have a clearance of `1.0mm` (why?).
